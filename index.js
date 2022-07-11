@@ -5,6 +5,10 @@ const guess = Math.floor(Math.random() * 100) + 1;
 // console.log(guess);
 const check = () => {
   const value = document.querySelector("#in").value;
+  if(value<1 || value>100){
+    output.innerHTML = "Please enter a value between 1 and 100";
+    return;
+  }
   if (value == guess) {
     output.innerHTML = "Congrats! Got the answer correctly!";
   } else if (value > guess) {
